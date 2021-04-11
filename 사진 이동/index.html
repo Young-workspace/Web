@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>무빙사진동호회</title>
+	<!-- 스타일 파일 연결 -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="javascript/jquery-3.6.0.min.js"></script>
+	<!-- 스크립트 연결 -->
+	<script src="javascript/script.js"></script>
+</head>
+
+<body>
+	<header class="all">
+		<!-- 로그 -->
+		<div id="header_logo" class="wrap">
+			<div class="logo">
+				<a href="#"><img src="logo/logo.png" alt="로고"></a>
+			</div>	
+		</div>
+
+		<!-- 네비게이션 -->
+		<nav>
+			<ul class="nav">
+				<li><a href="#">동호회 소개</a>
+					<ul class="submenu">
+						<li><a href="#">연혁</a></li>
+						<li><a href="#">회칙</a></li>
+						<li><a href="#">이용안내</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#">갤러리</a>
+					<ul class="submenu">
+						<li><a href="#">풍경자연</a></li>
+						<li><a href="#">인물</a></li>
+						<li><a href="#">사물</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#">교육안내</a>
+					<ul class="submenu">
+						<li><a href="#">기초사진</a></li>
+						<li><a href="#">디지털사진</a></li>
+						<li><a href="#">전문사진</a></li>
+					</ul>
+				</li>
+
+				<li onclick="winOpen();">CONTACT</li>
+			</ul>
+		</nav>
+
+		<!-- 플로트 제어 -->
+		<div class="clear"></div>
+	</header>
+
+
+	<!-- 슬라이드 -->
+	<div id="imgeslide" class="wrap">
+		<!-- 배경 이미지 -->
+		<div id="imgs">
+			<img src="images/slide/img1.jpg" alt="그림1">
+			<img src="images/slide/img2.jpg" alt="그림2">
+			<img src="images/slide/img3.jpg" alt="그림3">
+			<img src="images/slide/img4.jpg" alt="그림4">
+			<img src="images/slide/img5.jpg" alt="그림5">
+		</div>
+
+		<!-- 도트 이미지 -->
+		<ul id="imgsbar">
+			<li><a href="#" class="active" img-left="0px"><img src="images/slide/dot.png" alt="도트"></a></li>
+			<li><a href="#" img-left="-1000px"><img src="images/slide/dot.png" alt="도트"></a></li>
+			<li><a href="#" img-left="-2000px"><img src="images/slide/dot.png" alt="도트"></a></li>
+			<li><a href="#" img-left="-3000px"><img src="images/slide/dot.png" alt="도트"></a></li>
+			<li><a href="#" img-left="-4000px"><img src="images/slide/dot.png" alt="도트"></a></li>
+		</ul>
+
+		<!-- 슬로건 -->
+		<div class="welcome">
+			<h2>무빙사진갤러리</h2>
+		</div>
+	</div>
+	<!-- 플로트 제어 -->
+	<div class="clear"></div>
+
+
+	<!-- 콘텐츠 -->
+	<div id="contents" class="wrap">
+		<!-- 공지사항 -->
+		<div class="notice">
+			<h2>공지사항</h2>
+			<table class="table">
+				<tr>
+					<td><a href="#">제 30회 정기출사 및 모임이 있습니다.</a></td>
+					<td>2021-03-13</td>
+				</tr>
+				<tr>
+					<td><a href="#">대한민국 사진공모전이 개최됩니다. 참여해보세요.</a></td>
+					<td>2021-03-12</td>
+				</tr>
+				<tr>
+					<td><a href="#">대한민국의 자연 사진 전시회가 있습니다.</a></td>
+					<td>2021-03-12</td>
+				</tr>
+				<tr>
+					<td><a href="#">포토그래퍼와 함께하는 디지털사진 설명회가 있습니다.</a></td>
+					<td>2021-03-11</td>
+				</tr>
+				<tr>
+					<td><a href="#">무빙동보회에 오신것을 환영합니다. 회원가입은 여기서...</a></td>
+					<td>2021-03-10</td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- 파트너-->
+		<div class="partner">
+			<h2>Partner Site</h2>
+			<div class="partner_info">
+				<img src="images/partner/partner.png" alt="그림1">
+			</div>
+		</div>
+		<!-- 파트너 모달 -->
+		<div class="modal">
+			<div class="content">
+				<img src="images/partner/partner_up.png" alt="그림2">
+				<button>닫기</button>
+			</div>
+		</div>
+		
+		<!-- 아이콘 -->
+		<div class="icon">
+			<div class="icons">
+				<div class="btn">
+					<img src="images/icons/icon3.png" alt="그림1">
+					<button>커뮤니티</button>
+				</div>
+				<div class="btn">
+					<img src="images/icons/icon2.png" alt="그림2">
+					<button>전시회</button>
+				</div>
+				<div class="btn">
+					<img src="images/icons/icon1.png" alt="그림3">
+					<button>정보마당</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 플로트 제어 -->
+	<div class="clear"></div>
+
+
+	<footer>
+		<div class="wrap">
+			<ul>
+				<li><a href="#">법적고지</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+			</ul>
+			<p>
+				상호명: 무빙사진동호회<br>
+				대표자: 홍길동<br>
+				주소: 서울시 서대문구 ....<br>
+			</p>
+		</div>
+
+
+		<!-- 플로트 제어 -->
+		<div class="clear"></div>
+	</footer>
+</body>
+</html>

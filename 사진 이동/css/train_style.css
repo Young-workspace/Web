@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* 전체 초기화*/
+*{
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	font-family: '맑은 고딕';
+}
+body, html{
+	background: #fff;
+	color: #666;
+	min-width: 1000px;
+}
+img{max-width: 100%;}
+
+/* 기본틀들 설정*/
+.all{
+	width: 100%;
+	float: left;
+}
+/*이미지 슬라이드, content 등 처리*/
+.wrap{width: 1000px;}
+
+#contents{
+	height: 500px;
+	padding: 20px;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+.clear{clear: both; position: inherit;}
+
+

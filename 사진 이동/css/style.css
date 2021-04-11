@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+/*초기화*/
+*{
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	font-family: '맑은 고딕';
+}
+body,html{
+	background: #fff;
+	color: #666;
+	/*최소 width 설정*/
+	min-width: 1000px; 
+}
+img{
+	/*최대 width를 100%로 설정*/
+	max-width: 100%;
+}
+
+.all{
+	width: 100%;
+	float: left;
+	/*background: pink;*/
+}
+
+.wrap{width: 1000px;}
+
+#contents{
+	height: 500px;
+	/*background: pink;*/
+	padding: 20px;
+}
+
+a{
+	/*a 태그의 색깔을 상속받는다.
+		html 태그에 color는 #666
+	*/
+	color:inherit;
+	/*밑줄 제거*/
+	text-decoration: none;
+}
+
+.clear{clear: both; position: inherit;}
+
+/*header 처리 부분*/
+header{
+	/*background: orange;*/
+	height: 150px;
+}
+#header_logo{padding: 20px;}	/*로고 위에 공간 생김*/
+.logo{
+	height: 110px;
+	/*overflow: hidden*/
+	float: left;
+}
+.logo>a>img{
+	width: 300px;
+}
+
+nav{
+	float: left;
+	padding-left: 50px;
+}
+.nav{
+	/*background: green;*/
+	width: 600px;
+	height: 20px;
+	margin-top: 10px;
+}
+.nav>li{
+	/*background: pink;*/
+	/*width가 합쳐서 600이 되어야 함*/
+	width: 150px;
+	float: left;
+	text-align: center;
+	padding: 5px 0;
+}
+.nav>li:after{
+	clear: both;
+}
+.nav>li:hover{
+	color: #fff;
+	background: #3366ff;
+}
+
+.submenu{
+	display: none;
+	background-color: rgba(255,255,255,0.8);
+	margin-top: 5px;
+	width: 100%;
+}
+.submenu>li:hover{
+	background: #999;
+	color: inherit;
+}
+
+
+/*슬라이드 부분*/
+#imgeslide{
+	/*background: #aff;*/
+	/*플로트 제어*/
+	overflow: hidden;
+	width: 1000px;
+	height: 400px;
+	position: relative;
+}
+#imgs{
+	/*background: #ffa;*/
+	width: 5000px;
+	position: absolute;
+}
+#imgs>img{
+	float: left;
+}
+
+#imgsbar{
+	/*background: green;*/
+
+	/*imgs가 position으로 제어 되어서 position이 필요함*/
+	/*position: absolute; margin auto가 인식 안되서 relative이용*/ 
+	position: relative;
+	margin: 20px auto; 
+	width: 80px;
+}
+#imgsbar a{
+	float: left;
+	width: 15px; height: 15px;
+	background: url('../images/slide/dot.png') no-repeat;
+}
+#imgbar a.active{
+	/*위로 30px 이동*/
+	background-position: 0 -30px;
+}
+
+.welcome{
+	position: absolute; left: 50%; top: 50%;
+	/*슬로건 위치 조정, !important로 우선 순위 지정*/
+	margin-left: -150px !important; margin-top: -50px !important;
+	width: 300px; height: 100px; line-height: 100px;
+	background: rgba(255,255,255,0.2);
+	border-radius: 20px;
+	text-align: center;
+}
+.welcome h2{
+	color: white;
+}
+
+/*콘텐츠 부분*/
+.notice{
+	/*500 넘으면 안됨*/
+	/*background: violet;*/
+	width: 480px;
+	margin-top: 20px;
+	float: left;
+}
+.notice h2{
+	color: #666; text-align: center;
+	padding-bottom: 10px
+}
+.table{
+	/*border 사이에 경계를 없앤다.*/
+	border-collapse: collapse;
+	font-size: 0.9em;
+	color: #666;
+}
+.table td{
+	/*코드 순서 중요함*/
+	padding: 5px;
+	padding-top: 10px;
+
+}
+.table tr:nth-child(2n){
+	background: #ccc;
+}
+
+.partner{
+	/*500 넘으면 안됨*/
+	/*background: skyblue;*/
+	width: 480px;
+	margin-top: 20px;
+	float: right;
+
+	/*height가 다르면 모달이 짧은 쪽에 들어가는 오류 발생*/
+	height: 220px;
+}
+.partner h2{
+	color: #666; text-align: center;
+	padding-bottom: 10px
+}
+.partner_info{
+	margin-top: 10px;
+	text-align: center;
+}
+
+.modal{
+	display: none;
+	/*위에 튀어나오도록*/
+	/*position: absolute;*/ 
+	position:fixed;
+	left: 0; top:0;
+	
+	width: 100%; height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.modal .content{
+	width: 600px; padding: 20px;
+	background: #fff;
+	margin: 20px auto;
+	text-align: center;
+
+}
+.modal .content img{
+	display: block;
+	/*margin: 0 auto; 위에 이미 text align해서 필요없음*/
+	/*위아래 20px, 좌우로 30px*/
+	padding: 20px 30px;
+}
+.modal .content button{
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background-color: #999;
+	border: none;
+	/*마우스 올리면 포인터로 변환*/
+	cursor: pointer;
+}
+
+.icon{
+	/*background: green;*/
+	margin-top: 10px;
+	/*위에 내용과 겹치는 경우가 있음*/
+	position: relative;
+	left: 10%;
+}
+.icons{text-align:center;}	/*버튼에 text-align해도 되는 데 버튼이 여러개라 부모에서 설정함*/
+.btn{
+	margin: 30px;
+	width: 180px;
+	float: left;
+	/*display: inline-block;*/
+}
+.btn button{
+	padding: 10px;
+	background: #999; color: #fff;
+	border: none; border-radius: 10px;
+}
+.btn button:hover{
+	background-color: #3366ff;
+}
+
+/*footer 부분*/
+footer{
+	width: 1000px; height: 100px;
+	background: #3366ff; color: white;
+	margin-top: 10px;
+	/**/
+	/*overflow: hidden;*/
+}
+footer .wrap{
+	/*background: blue;*/
+	padding: 10px 20px;
+}
+footer ul{
+	width: 50%;
+	float: left;
+}
+footer ul li{
+	margin-left: 20px; margin-top: 10px;
+	float: left;
+}
+footer p{
+	width: 50%;
+	float: right;
+	font-size: 14px; color: #fff;
+}
